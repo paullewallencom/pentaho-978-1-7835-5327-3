@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="QUERY4" type="sql.jndi">
+         <Jndi>Pentaho MongoDB Cookbook Kettle Thin</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="QUERY4"
+               id="QUERY4"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>select customerCountry, SUM(totalPrice) as totalSales 
+from Orders
+group by customerCountry</Query>
+   </DataAccess>
+</CDADescriptor>

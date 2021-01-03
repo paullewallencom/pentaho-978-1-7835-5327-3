@@ -1,0 +1,117 @@
+<Schema name='Mondrian4MongoDBPentahoCookbook' quoteSql='false' missingLink='ignore' metamodelVersion='4.00'>
+  <PhysicalSchema>
+    <Table name='Orders'>
+      <ColumnDefs>
+        <CalculatedColumnDef name='orderDate' type='String' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $orderDate
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='requiredDate' type='String' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $requiredDate
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='customerNumber' type='Numeric' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $customer.customerNumber
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='customerCountry' type='String' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $customer.address.country
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='customerName' type='String' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $customer.name
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='productName' type='String' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $product.name
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='productCode' type='String' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $product.code
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='totalPrice' type='Numeric' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $totalPrice
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+        <CalculatedColumnDef name='quantityOrdered' type='Numeric' >
+          <ExpressionView >
+            <SQL dialect='generic'>
+              $quantityOrdered
+            </SQL>
+          </ExpressionView>
+        </CalculatedColumnDef>
+      </ColumnDefs>
+    </Table>
+  </PhysicalSchema>
+  <Cube name='Orders' defaultMeasure='Total Price'>
+    <Dimensions>
+      <Dimension name='Product' table='Orders' key='Product Code'>
+        <Attributes>
+          <Attribute name='Name' keyColumn='productName' hasHierarchy='false'/>
+          <Attribute name='Product Code' keyColumn='productCode' hasHierarchy='false'/>
+        </Attributes>
+        <Hierarchies>
+          <Hierarchy name='Product' hasAll='true'>
+            <Level attribute='Name'/>
+          </Hierarchy>
+        </Hierarchies>
+      </Dimension>
+      <Dimension name='Customer' table='Orders' key='Product Code'>
+        <Attributes>
+          <Attribute name='Country' keyColumn='customerCountry' hasHierarchy='false'/>
+          <Attribute name='Name' keyColumn='customerName' hasHierarchy='false'/>
+          <Attribute name='Product Code' keyColumn='customerNumber' hasHierarchy='false'/>
+        </Attributes>
+        <Hierarchies>
+          <Hierarchy name='Customer' hasAll='true'>
+            <Level attribute='Country'/>
+            <Level attribute='Name'/>
+          </Hierarchy>
+        </Hierarchies>
+      </Dimension>
+    </Dimensions>
+    <MeasureGroups>
+      <MeasureGroup name='Orders' table='Orders'>
+        <Measures>
+          <Measure name='Total Price' column='totalPrice' aggregator='sum' formatString='Standard'/>
+          <Measure name='Quantity Ordered' column='quantityOrdered' aggregator='sum' formatString='Standard'/>
+        </Measures>
+        <DimensionLinks>
+          <FactLink dimension='Product' />
+          <FactLink dimension='Customer' />
+        </DimensionLinks>
+      </MeasureGroup>
+    </MeasureGroups>
+    <CalculatedMembers>
+      <CalculatedMember name='Avg Price Each' dimension='Measures'>
+        <Formula>IIF([Measures].[Quantity Ordered]=0,0,[Measures].[Total Price]/[Measures].[Quantity Ordered])</Formula>
+        <CalculatedMemberProperty name='MEMBER_ORDINAL' value='9'/>
+      </CalculatedMember>
+    </CalculatedMembers>
+  </Cube>
+</Schema>

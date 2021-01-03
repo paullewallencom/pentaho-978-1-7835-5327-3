@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="QUERY3" type="olap4j.defaultolap4j">
+         <Driver>org.pentaho.platform.plugin.services.connections.PentahoSystemDriver</Driver>
+         <Role></Role>
+         <Url>jdbc:mondrian4:Host=localhost;dbname=SteelWheels;DataServicesProvider=com.pentaho.analysis.mongo.MongoDataServicesProvider;Catalog=/home/latino/git/pentaho-mongodb-cookbook/source code/chapter4/MongoDBPentahoCookbook.mondrian.xml</Url>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="QUERY3"
+               id="QUERY3"
+               type="olap4j">
+      <Columns/>
+      <Parameters/>
+      <Query>WITH
+SET [*NATIVE_CJ_SET] AS 'FILTER([*BASE_MEMBERS__Customer_._Customer_], NOT ISEMPTY ([Measures].[Total Price]))'
+SET [*BASE_MEMBERS__Measures_] AS '{[Measures].[Total Price]}'
+SET [*BASE_MEMBERS__Customer_._Customer_] AS '[Customer].[Customer].[Country].MEMBERS'
+SET [*CJ_ROW_AXIS] AS 'GENERATE([*NATIVE_CJ_SET], {([Customer].[Customer].CURRENTMEMBER)})'
+SET [*SORTED_ROW_AXIS] AS 'ORDER([*CJ_ROW_AXIS],[Customer].[Customer].CURRENTMEMBER.ORDERKEY,BASC)'
+SELECT
+[*BASE_MEMBERS__Measures_] ON COLUMNS
+,[*SORTED_ROW_AXIS] ON ROWS
+FROM [Orders]</Query>
+   </DataAccess>
+</CDADescriptor>

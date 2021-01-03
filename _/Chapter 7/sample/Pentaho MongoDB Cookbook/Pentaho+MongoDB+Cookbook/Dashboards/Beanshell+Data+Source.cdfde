@@ -1,0 +1,99 @@
+{
+ "layout": {
+  "title": "CDF - Sample structure",
+  "rows": []
+ },
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SCRIPTING",
+    "name": "SCRIPTING Queries",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "SCRIPTING Queries",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "b92ecc15-6245-984f-7037-2bbf51461882",
+    "type": "Componentsscriptable_scripting",
+    "typeDesc": "scriptable over scripting",
+    "parent": "SCRIPTING",
+    "properties": [
+     {
+      "name": "name",
+      "value": "QUERY2",
+      "type": "Id"
+     },
+     {
+      "name": "language",
+      "value": "beanshell",
+      "type": "String"
+     },
+     {
+      "name": "initscript",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "query",
+      "value": "import com.mongodb.*;\nimport org.pentaho.reporting.engine.classic.core.util.TypedTableModel;\nMongo mongo = new Mongo(\"localhost\",27017);\ndb = mongo.getDB(\"SteelWheels\");\norders = db.getCollection(\"Orders\");\nString[] columnNames = {\"Country\", \"City\", \"Line\", \"TotalPrice\"};\nClass[] columnTypes = {String.class, String.class, String.class, Double.class};\nTypedTableModel model = new TypedTableModel(columnNames, columnTypes);\n\nBasicDBObject dbo = new BasicDBObject();\n\ndocs= orders.find(dbo);\n\nwhile (docs.hasNext()) {\n    doc = docs.next();\n\tmodel.addRow(new Object[] {\n\t\tdoc.get(\"customer\").get(\"address\").get(\"country\"),\n\t\tdoc.get(\"customer\").get(\"address\").get(\"city\"),\n\t\tdoc.get(\"product\").get(\"line\"),\n\t\tdoc.get(\"totalPrice\")\n\t});\n}\ndocs.close();\nreturn model;\n",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "scripting.scripting",
+    "meta_datype": "scriptable"
+   }
+  ]
+ },
+ "filename": "/public/Pentaho MongoDB Cookbook/Dashboards/Beanshell Data Source.cdfde"
+}

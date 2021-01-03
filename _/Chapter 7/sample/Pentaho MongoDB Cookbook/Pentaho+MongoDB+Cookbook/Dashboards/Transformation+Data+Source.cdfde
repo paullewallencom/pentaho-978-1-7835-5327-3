@@ -1,0 +1,99 @@
+{
+ "layout": {
+  "title": "CDF - Sample structure",
+  "rows": []
+ },
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "KETTLE",
+    "name": "KETTLE Queries",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "KETTLE Queries",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "e8f4efce-3cd2-ae94-e8ef-d580ee6c5c3c",
+    "type": "Componentskettle_kettleTransFromFile",
+    "typeDesc": "kettle over kettleTransFromFile",
+    "parent": "KETTLE",
+    "properties": [
+     {
+      "name": "name",
+      "value": "QUERY1",
+      "type": "Id"
+     },
+     {
+      "name": "ktrFile",
+      "value": "/public/Pentaho MongoDB Cookbook/Transformations/chapter6-getorders.ktr",
+      "type": "KtrPath"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "query",
+      "value": "OUT",
+      "type": "String"
+     },
+     {
+      "name": "variables",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "kettle.TransFromFile",
+    "meta_datype": "kettle"
+   }
+  ]
+ },
+ "filename": "public/Pentaho MongoDB Cookbook/Dashboards/Transformation Data Source.wcdf"
+}

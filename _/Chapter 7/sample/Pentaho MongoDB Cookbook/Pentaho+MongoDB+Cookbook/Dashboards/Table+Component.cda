@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="QUERY1" type="kettle.TransFromFile">
+         <KtrFile>../../../public/Pentaho MongoDB Cookbook/Transformations/chapter6-getorders.ktr</KtrFile>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="QUERY1"
+               id="QUERY1"
+               type="kettle">
+      <Columns/>
+      <Parameters/>
+      <Query>OUT</Query>
+   </DataAccess>
+</CDADescriptor>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="16-02-2015 09:41:35 WET" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook">
+        <ExportManifestProperty>
+            <EntityMetaData name="Pentaho MongoDB Cookbook" createdDate="2015-01-21T20:27:06.943Z" isFolder="true" path="Pentaho MongoDB Cookbook" isHidden="false" locale="en_US" title="Pentaho MongoDB Cookbook"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards">
+        <ExportManifestProperty>
+            <EntityMetaData name="Dashboards" createdDate="2015-01-22T16:36:04.382Z" isFolder="true" path="Pentaho MongoDB Cookbook/Dashboards" isHidden="false" locale="en_US" title="Dashboards"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/2x2 Layout.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="2x2 Layout.cdfde" createdDate="2015-01-22T19:54:11.659Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/2x2 Layout.cdfde" isHidden="false" locale="en_US" title="2x2 Layout.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/2x2 Layout.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="2x2 Layout.wcdf" createdDate="2015-01-22T19:54:11.553Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/2x2 Layout.wcdf" isHidden="false" locale="en_US" description="2x2 Layout" title="2x2 Layout"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Beanshell Data Source.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Beanshell Data Source.cda" createdDate="2015-01-22T16:55:28.870Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Beanshell Data Source.cda" isHidden="false" locale="en_US" title="Beanshell Data Source.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Beanshell Data Source.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Beanshell Data Source.cdfde" createdDate="2015-01-22T16:55:28.818Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Beanshell Data Source.cdfde" isHidden="false" locale="en_US" title="Beanshell Data Source.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Beanshell Data Source.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Beanshell Data Source.wcdf" createdDate="2015-01-22T16:55:28.776Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Beanshell Data Source.wcdf" isHidden="false" locale="en_US" description="Beanshell Data Source" title="Beanshell Data Source"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Kettle Thin Data Source.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Kettle Thin Data Source.cda" createdDate="2015-01-22T19:14:23.172Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Kettle Thin Data Source.cda" isHidden="false" locale="en_US" title="Kettle Thin Data Source.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Kettle Thin Data Source.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Kettle Thin Data Source.cdfde" createdDate="2015-01-22T19:14:23.132Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Kettle Thin Data Source.cdfde" isHidden="false" locale="en_US" title="Kettle Thin Data Source.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Kettle Thin Data Source.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Kettle Thin Data Source.wcdf" createdDate="2015-01-22T19:14:23.065Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Kettle Thin Data Source.wcdf" isHidden="false" locale="en_US" description="Kettle Thin Data Source" title="Kettle Thin Data Source"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Line Chart Component.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Line Chart Component.cda" createdDate="2015-01-22T21:53:20.181Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Line Chart Component.cda" isHidden="false" locale="en_US" title="Line Chart Component.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Line Chart Component.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Line Chart Component.cdfde" createdDate="2015-01-22T21:53:20.130Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Line Chart Component.cdfde" isHidden="false" locale="en_US" title="Line Chart Component.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Line Chart Component.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Line Chart Component.wcdf" createdDate="2015-01-22T21:53:20.007Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Line Chart Component.wcdf" isHidden="false" locale="en_US" description="Line Chart Component" title="Line Chart Component"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/MongOLAP Data Source.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="MongOLAP Data Source.cda" createdDate="2015-01-22T18:16:58.368Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/MongOLAP Data Source.cda" isHidden="false" locale="en_US" title="MongOLAP Data Source.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/MongOLAP Data Source.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="MongOLAP Data Source.cdfde" createdDate="2015-01-22T18:16:58.327Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/MongOLAP Data Source.cdfde" isHidden="false" locale="en_US" title="MongOLAP Data Source.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/MongOLAP Data Source.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="MongOLAP Data Source.wcdf" createdDate="2015-01-22T18:16:58.227Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/MongOLAP Data Source.wcdf" isHidden="false" locale="en_US" description="MongOLAP Data Source" title="MongOLAP Data Source"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Table Component.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Table Component.cda" createdDate="2015-01-22T21:26:23.022Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Table Component.cda" isHidden="false" locale="en_US" title="Table Component.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Table Component.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Table Component.cdfde" createdDate="2015-01-22T21:24:02.396Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Table Component.cdfde" isHidden="false" locale="en_US" title="Table Component.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Table Component.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Table Component.wcdf" createdDate="2015-01-22T21:24:02.322Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Table Component.wcdf" isHidden="false" locale="en_US" description="Table Component" title="Table Component"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Transformation Data Source.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Transformation Data Source.cda" createdDate="2015-01-22T16:36:32.542Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Transformation Data Source.cda" isHidden="false" locale="en_US" title="Transformation Data Source.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Transformation Data Source.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Transformation Data Source.cdfde" createdDate="2015-01-22T16:36:32.502Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Transformation Data Source.cdfde" isHidden="false" locale="en_US" title="Transformation Data Source.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Dashboards/Transformation Data Source.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Transformation Data Source.wcdf" createdDate="2015-01-22T16:36:32.465Z" isFolder="false" path="Pentaho MongoDB Cookbook/Dashboards/Transformation Data Source.wcdf" isHidden="false" locale="en_US" description="Transformation Data Source" title="Transformation Data Source"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho MongoDB Cookbook/Transformations">
+        <ExportManifestProperty>
+            <EntityMetaData name="Transformations" createdDate="2015-01-21T20:27:19.624Z" isFolder="true" path="Pentaho MongoDB Cookbook/Transformations" isHidden="false" locale="en_US" title="Transformations"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

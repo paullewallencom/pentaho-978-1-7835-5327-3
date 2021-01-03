@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="QUERY2" type="scripting.scripting">
+         <Initscript></Initscript>
+         <Language>beanshell</Language>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="QUERY2"
+               id="QUERY2"
+               type="scriptable">
+      <Columns/>
+      <Parameters/>
+      <Query>import com.mongodb.*;
+import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+Mongo mongo = new Mongo("localhost",27017);
+db = mongo.getDB("SteelWheels");
+orders = db.getCollection("Orders");
+String[] columnNames = {"Country", "City", "Line", "TotalPrice"};
+Class[] columnTypes = {String.class, String.class, String.class, Double.class};
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+BasicDBObject dbo = new BasicDBObject();
+
+docs= orders.find(dbo);
+
+while (docs.hasNext()) {
+    doc = docs.next();
+	model.addRow(new Object[] {
+		doc.get("customer").get("address").get("country"),
+		doc.get("customer").get("address").get("city"),
+		doc.get("product").get("line"),
+		doc.get("totalPrice")
+	});
+}
+docs.close();
+return model;</Query>
+   </DataAccess>
+</CDADescriptor>

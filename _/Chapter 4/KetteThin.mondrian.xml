@@ -1,0 +1,42 @@
+<Schema name="Orders">
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="date">
+    <Hierarchy visible="true" hasAll="true" primaryKey="date">
+      <Table name="date" schema="Kettle">
+      </Table>
+      <Level name="year" visible="true" column="year" type="String" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never" caption="Year">
+      </Level>
+      <Level name="month" visible="true" column="month_long_label_eng" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="Month">
+      </Level>
+      <Level name="day" visible="true" column="date_iso" type="String" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" caption="Day">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="orders" caption="Ordes" visible="true" cache="true" enabled="true">
+    <Table name="orders" schema="Kettle">
+    </Table>
+    <DimensionUsage source="date" name="orderDate" caption="Order date" visible="true" foreignKey="orderDate" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="date" name="requiredDate" caption="Required Date" visible="true" foreignKey="requiredDate" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="customerNumber" highCardinality="false" name="customer" caption="Customer">
+      <Hierarchy visible="true" hasAll="true" primaryKey="customerNumber">
+        <Level name="country" visible="true" column="customerCountry" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Country">
+        </Level>
+        <Level name="name" visible="true" column="customerName" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Name">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="productCode" highCardinality="false" name="product" caption="Product">
+      <Hierarchy visible="true" hasAll="true" primaryKey="productCode">
+        <Level name="name" visible="true" column="productName" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Name">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="totalPrice" column="totalPrice" datatype="Numeric" aggregator="sum" caption="Total Price" visible="true">
+    </Measure>
+    <Measure name="quantityOrdered" column="quantityOrdered" datatype="Numeric" aggregator="sum" caption="Quantity Ordered" visible="true">
+    </Measure>
+    <CalculatedMember name="avgPriceEach" caption="Avg Price Each" formula="IIF([Measures].[quantityOrdered]=0,0,[Measures].[totalPrice]/[Measures].[quantityOrdered])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+</Schema>

@@ -1,0 +1,109 @@
+{
+ "layout": {
+  "title": "CDF - Sample structure",
+  "rows": []
+ },
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "OLAP4J",
+    "name": "OLAP4J Queries",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "OLAP4J Queries",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "e08f6447-c0e0-d98a-a8a0-2db332825365",
+    "type": "Componentsolap4j_olap4j",
+    "typeDesc": "olap4j over olap4j",
+    "parent": "OLAP4J",
+    "properties": [
+     {
+      "name": "name",
+      "value": "QUERY3",
+      "type": "Id"
+     },
+     {
+      "name": "driver",
+      "value": "org.pentaho.platform.plugin.services.connections.PentahoSystemDriver",
+      "type": "String"
+     },
+     {
+      "name": "url",
+      "value": "jdbc:mondrian4:Host=localhost;dbname=SteelWheels;DataServicesProvider=com.pentaho.analysis.mongo.MongoDataServicesProvider;Catalog=/home/latino/git/pentaho-mongodb-cookbook/source code/chapter4/MongoDBPentahoCookbook.mondrian.xml",
+      "type": "String"
+     },
+     {
+      "name": "role",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "property",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "query",
+      "value": "WITH\nSET [*NATIVE_CJ_SET] AS 'FILTER([*BASE_MEMBERS__Customer_._Customer_], NOT ISEMPTY ([Measures].[Total Price]))'\nSET [*BASE_MEMBERS__Measures_] AS '{[Measures].[Total Price]}'\nSET [*BASE_MEMBERS__Customer_._Customer_] AS '[Customer].[Customer].[Country].MEMBERS'\nSET [*CJ_ROW_AXIS] AS 'GENERATE([*NATIVE_CJ_SET], {([Customer].[Customer].CURRENTMEMBER)})'\nSET [*SORTED_ROW_AXIS] AS 'ORDER([*CJ_ROW_AXIS],[Customer].[Customer].CURRENTMEMBER.ORDERKEY,BASC)'\nSELECT\n[*BASE_MEMBERS__Measures_] ON COLUMNS\n,[*SORTED_ROW_AXIS] ON ROWS\nFROM [Orders]",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "olap4j.defaultolap4j",
+    "meta_datype": "olap4j"
+   }
+  ]
+ },
+ "filename": "/public/Pentaho MongoDB Cookbook/Dashboards/MongOLAP Data Source.cdfde"
+}
